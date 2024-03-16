@@ -1,0 +1,30 @@
+Executing prepublish script 'npm run vscode:prepublish'...
+
+> testfilegenerator@0.0.1 vscode:prepublish
+> pnpm run package
+
+
+> testfilegenerator@0.0.1 package /Users/razanstump/workspace/vs_code_extensions/testfilegenerator
+> webpack --mode production --devtool hidden-source-map
+
+asset extension.js 3.02 KiB [compared for emit] [minimized] (name: main) 1 related asset
+./src/extension.ts 5.76 KiB [built] [code generated]
+external "fs" 42 bytes [built] [code generated]
+external "path" 42 bytes [built] [code generated]
+external "vscode" 42 bytes [built] [code generated]
+webpack 5.90.3 compiled successfully in 558 ms
+Executing prepublish script 'npm run vscode:prepublish'...
+
+> testfilegenerator@0.0.1 vscode:prepublish
+> pnpm run package
+
+
+> testfilegenerator@0.0.1 package /Users/razanstump/workspace/vs_code_extensions/testfilegenerator
+> webpack --mode production
+
+asset extension.js 3.06 KiB [emitted] [minimized] (name: main) 1 related asset
+./src/extension.ts 5.76 KiB [built] [code generated]
+external "fs" 42 bytes [built] [code generated]
+external "path" 42 bytes [built] [code generated]
+external "vscode" 42 bytes [built] [code generated]
+webpack 5.90.3 compiled successfully in 547 ms

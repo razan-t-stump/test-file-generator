@@ -1,0 +1,92 @@
+{
+  "name": "testfilegenerator",
+  "publisher": "Cosmos Solutions",
+  "author": {
+    "name": "Razan Stump "
+  },
+  "license": "GPLv3",
+  "displayName": "Test File Generator",
+  "description": "Generates test files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Testing"
+  ],
+  "keywords": [
+    "dart",
+    "test",
+    "unit",
+    "integration",
+    "file",
+    "generate"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.createUnitTestFile",
+        "title": "Create Unit Test File",
+        "category": "Test File"
+      },
+      {
+        "command": "extension.createIntegrationTestFile",
+        "title": "Create Integration Test File",
+        "category": "Test File"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.createUnitTestFile",
+          "when": "resourceLangId == 'dart'",
+          "group": "2_create",
+          "target": "viewItem"
+        },
+        {
+          "command": "extension.createIntegrationTestFile",
+          "when": "resourceLangId == 'dart'",
+          "group": "2_create",
+          "target": "viewItem"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "extension.createUnitTestFile",
+          "when": "resourceLangId == 'dart'"
+        },
+        {
+          "command": "extension.createIntegrationTestFile",
+          "when": "resourceLangId == 'dart'"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vscode/test-cli": "^0.0.6",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
+}
