@@ -16,3 +16,5 @@ You can install Test File Generator via the Visual Studio Code Marketplace or by
 
 To create a unit test file for the currently opened file, use the "Create Unit Test File" command. To create an integration test file, use the "Create Integration Test File" command. You can also use these commands from the file tab context menu.
 
+## License
+This extension is licensed under the [GPLv3 License](LICENSE).
