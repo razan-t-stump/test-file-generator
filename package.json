@@ -7,6 +7,12 @@
   "license": "GPLv3",
   "displayName": "Test File Generator",
   "description": "Generates test files",
+  "repository": {
+    "url": "https://github.com/razan-t-stump/test-file-generator"
+  },
+  "bugs": {
+    "url": "https://github.com/razan-t-stump/test-file-generator/issues"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.87.0"
